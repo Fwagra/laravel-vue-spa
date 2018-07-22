@@ -4,6 +4,7 @@ import ProfileWrapper from './components/profile/ProfileWrapper.vue';
 import Profile from './components/profile/Profile.vue';
 import EditProfile from './components/profile/edit-profile/EditProfile.vue';
 import EditPassword from './components/profile/edit-password/EditPassword.vue';
+import Chatroom from './components/chatroom/Chatroom.vue';
 
 export default [
 	{
@@ -17,6 +18,12 @@ export default [
 		name: 'login',
 		component: Login,
 		meta: {requiresGuest: true}
+	},
+	{
+		path: '/chatroom',
+		name: 'chatroom',
+		component: Chatroom,
+		meta: {requiresAuth: true}
 	},
 	{
 		path: '/profile',

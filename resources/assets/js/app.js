@@ -3,6 +3,7 @@ import Vue from 'vue';
 import VueNoty from 'vuejs-noty';
 import axios from 'axios';
 
+
 window.$ = window.jQuery = $;
 window.axios = axios;
 require('bootstrap');
@@ -18,6 +19,7 @@ import router from './router';
 import store from './store/index';
 import App from './components/App.vue';
 import jwtToken from './helpers/jwt-token';
+
 
 axios.interceptors.request.use(config => {
 	config.headers['X-CSRF-TOKEN'] = window.Laravel.csrfToken;
@@ -49,6 +51,8 @@ axios.interceptors.response.use(response => {
 
 	return Promise.reject(error);
 });
+
+
 
 Vue.component('app', App);
 

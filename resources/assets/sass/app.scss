@@ -19,3 +19,39 @@ body {
 .fade-enter, .fade-leave-active {
   opacity: 0;
 }
+
+.chatroom {
+  padding: 1rem;
+  overflow-y: scroll;
+  height: 75vh;
+}
+
+.message-wrapper {
+  margin-bottom: .5rem;
+  .infos{
+    display: inline-block;
+  }
+  .message {
+    padding: 1rem;
+    background: #f5e3bd;
+  }
+  .author {
+    text-align: right;
+    font-size: .7rem;
+  }
+}
+.own-message {
+  text-align: right;
+   .message {
+    background: #7ff3a2;
+  }
+}
+
+.chat-form{
+  padding-top: 1rem;
+  display: flex;
+  width: 100%;
+  .text {
+    flex:5;
+  }
+}
