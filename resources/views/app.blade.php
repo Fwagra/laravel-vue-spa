@@ -13,7 +13,10 @@
             window.Laravel = {!! json_encode([
                 'csrfToken' => csrf_token(),
                 'siteName'  => config('app.name'),
-                'apiDomain' => config('app.url').'/api'
+                'broadcastUrl' => config('app.url').'/broadcasting/auth',
+                'apiDomain' => config('app.url').'/api',
+                'pusherKey' => env('PUSHER_APP_KEY'),
+                'pusherCluster' => env('PUSHER_APP_CLUSTER')
             ]) !!}
         </script>
     </head>
